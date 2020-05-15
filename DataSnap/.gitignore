@@ -1,0 +1,11 @@
+## Ignorar extensiones
+*.dsk*
+*.identcache*
+*.local*
+*.stat*
+*.~dsk*
+
+## Ignorar directorios
+Win32
+__history
+__recovery
