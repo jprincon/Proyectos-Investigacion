@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CanActivate } from '@angular/router/src/utils/preactivation';
 import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
-import { TransferenciaService } from './transferencia.service';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -12,21 +11,16 @@ export class AuthGuardService implements CanActivate {
   path: ActivatedRouteSnapshot[];
   route: ActivatedRouteSnapshot;
 
-  puedeVerRuta = false;
+  puedeVerRuta = true;
 
-  constructor(private transfer: TransferenciaService,
-              private router: Router) {
-    transfer.obtenerMuestraUsuario.subscribe((rMuestra: boolean) => {
-      // console.log(rMuestra);
-      this.puedeVerRuta = rMuestra;
-    });
+  constructor(private router: Router) {
 
     if (!this.puedeVerRuta) {
       this.router.navigate(['inicio']);
     }
   }
 
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | boolean {
+  canActivate(): boolean {
 
     return this.puedeVerRuta;
   }

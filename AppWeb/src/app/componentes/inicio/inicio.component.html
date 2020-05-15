@@ -1,7 +1,28 @@
-<div class="jumbotron card-shadow">
-    <h1 class="display-4">Estructura de Proyectos de Angular</h1>
-    <p class="lead">Esta estructura ya tiene toda la configuración para instalar las librerias necesarias para un buen proyecto de Angular</p>
-    <hr class="my-4">
-    <p>Esta estructura fue creada por Julián Andrés Rincón Penagos</p>
-    <a class="btn btn-primary btn-lg" role="button">Inicio del Proyecto</a>
+<div class="row">
+
+    <div class="col-md-9">
+        <h1>Proyectos de Investigación</h1>
+        <hr>
+
+        <p>Esta aplicación permite a los estudiantes de la Universidad del Quindío elaborar sus propuestas de investigación</p>
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card card-shadow">
+            <div class="card-body">
+                <div class="form-group">
+                    <label>Usuario</label>
+                    <input class="form-control" type="text" [(ngModel)]="usuario.idusuario" name="idusuario">
+                </div>
+
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <input class="form-control" type="password" [(ngModel)]="usuario.contra" name="contra">
+                </div>
+
+                <button class="btn btn-outline-success" (click)="iniciarSesion()">Iniciar Sesión</button>
+            </div>
+        </div>
+    </div>
 </div>

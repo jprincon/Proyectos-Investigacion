@@ -1,0 +1,22 @@
+<h1>Crear/Editar un Rol</h1>
+<hr>
+
+<div class="text-center" style="margin: 20px;" *ngIf="guardando">
+    <i class="fas fa-sync fa-10x text-success fa fa-spin"></i>
+    <h3>Guardando Rol ...</h3>
+    <h4 class="text-danger">Intento {{ contIntentos }} de 3</h4>
+</div>
+
+<div class="text-center" style="margin: 20px;" *ngIf="leyendo">
+    <i class="fas fa-sync fa-10x text-success fa fa-spin"></i>
+    <h3>Leyendo Rol ...</h3>
+</div>
+<form>
+    <div class="form-group">
+        <label style="font-weight: bold;">rol</label>
+        <input type="text" class="form-control" [(ngModel)]="rol.rol" name="rol">
+    </div>
+
+
+    <button (click)="guardarRol()" class="btn btn-outline-success float-right"><img src="assets/Iconos/Guardar.png" style="height: 32px;"> Guardar</button>
+</form>

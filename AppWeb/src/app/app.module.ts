@@ -23,6 +23,14 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { NgDropFilesDirective } from './Directivas/ng-drop-files.directive';
 import { InicioComponent } from './componentes/inicio/inicio.component';
+import { RolComponent } from './administrador/rol/rol.component';
+import { AdministradorComponent } from './administrador/administrador.component';
+import { DlgRolComponent } from './administrador/rol/dlg-rol/dlg-rol.component';
+import { SnackbarComponent } from './dialogos/snackbar/snackbar.component';
+import { ConfirmacionComponent } from './dialogos/confirmacion/confirmacion.component';
+import { UsuarioComponent } from './administrador/usuario/usuario.component';
+import { DlgUsuarioComponent } from './administrador/usuario/dlg-usuario/dlg-usuario.component';
+import { MenuPrincipalComponent } from './componentes/menu-principal/menu-principal.component';
 
 
 @NgModule({
@@ -34,7 +42,15 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
     HeaderComponent,
     FooterComponent,
     NgDropFilesDirective,
-    InicioComponent
+    InicioComponent,
+    RolComponent,
+    AdministradorComponent,
+    DlgRolComponent,
+    SnackbarComponent,
+    ConfirmacionComponent,
+    UsuarioComponent,
+    DlgUsuarioComponent,
+    MenuPrincipalComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +63,12 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
     ChartsModule,
     MatCheckboxModule
   ],
-  entryComponents: [],
+  entryComponents: [
+    DlgRolComponent,
+    ConfirmacionComponent,
+    SnackbarComponent,
+    DlgUsuarioComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

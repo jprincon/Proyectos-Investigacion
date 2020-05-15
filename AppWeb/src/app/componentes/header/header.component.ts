@@ -17,17 +17,7 @@ export class HeaderComponent implements OnInit {
               private transferencia: TransferenciaService) { }
 
   ngOnInit() {
-    this.transferencia.obtenerMuestraUsuario.subscribe((rMuestraUsuario: boolean) => {
-      this.mostrarUsuario = rMuestraUsuario;
-    });
 
-    this.transferencia.obtenerPermisoAdministrador.subscribe((rEsAdministrador: boolean) => {
-      this.esAdministrador = rEsAdministrador;
-    });
-
-    this.transferencia.obtenerNombreUsuario.subscribe((rNombreUsuario: string) => {
-      this.nombreUsuario = rNombreUsuario;
-    });
   }
 
   salir() {
@@ -42,8 +32,6 @@ export class HeaderComponent implements OnInit {
     }
 
     this.router.navigate(['inicio']);
-
-    this.transferencia.enviarMuestraUsuario(false);
   }
 
   irMenuPrincipal() {

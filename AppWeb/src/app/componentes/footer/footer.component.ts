@@ -1,4 +1,6 @@
+import { MESES } from './../../config/constantes';
 import { Component, OnInit } from '@angular/core';
+import { DIAS_SEMANA } from '../../config/constantes';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  Fecha: Date;
+  Fecha: string;
   constructor() { }
 
   ngOnInit() {
@@ -15,7 +17,8 @@ export class FooterComponent implements OnInit {
   }
 
   obtenerFechaHora() {
-    this.Fecha = new Date();
+    const fecha = new Date();
+    this.Fecha = `${DIAS_SEMANA[fecha.getDay() - 1]} ${fecha.getDate()} de ${MESES[fecha.getMonth()]} del ${fecha.getFullYear()} © Julián Andrés Rincón Penagos`;
   }
 
 }
